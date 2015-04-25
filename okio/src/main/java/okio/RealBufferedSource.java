@@ -203,6 +203,10 @@ final class RealBufferedSource implements BufferedSource {
     return buffer.readUtf8Line(newline);
   }
 
+  @Override public int readUtf8CodePoint() throws IOException {
+    return buffer.readUtf8CodePoint();
+  }
+
   @Override public short readShort() throws IOException {
     require(2);
     return buffer.readShort();
